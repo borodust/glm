@@ -406,7 +406,7 @@ namespace detail
 		{
 			vec<L, float, Q> Result;
 			const int s = _MM_SHUFFLE(c, c, c, c);
-			glm_f32vec4 va = static_cast<glm_f32vec4>(a.data);
+			glm_f32vec4 va = a.data;
 #			if GLM_ARCH & GLM_ARCH_AVX_BIT
 			Result.data = _mm_permute_ps(va, s);
 #			else

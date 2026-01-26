@@ -233,7 +233,7 @@ namespace glm
 	template<typename U>
 	GLM_FUNC_QUALIFIER GLM_CONSTEXPR vec<3, T, Q> & vec<3, T, Q>::operator+=(vec<1, U, Q> const& v)
 	{
-		return (*this = detail::compute_vec_add<3, T, Q, detail::is_aligned<Q>::value>::call(*this, vec<1, T, Q>(v.x)));
+		return (*this = detail::compute_vec_add<3, T, Q, detail::is_aligned<Q>::value>::call(*this, vec<3, T, Q>(vec<1, T, Q>(v.x))));
 	}
 
 	template<typename T, qualifier Q>
